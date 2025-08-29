@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>最短で細マッチョになれる！厳選外食リスト50選｜初心者向け（2025更新）</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter','Noto Sans JP',sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .font-heading { font-family: 'Noto Sans JP',sans-serif; font-weight: 900; }
+    .tab-active { background-color:#FBBF24; color:#1a202c; }
+    .tab-button { transition: all .2s ease; cursor:pointer; }
+    .tab-panel { display:none; overflow-x:auto; }
+    .tab-panel-active { display:block; }
+    .desktop-only { display:none; }
+    .mobile-only { display:block; }
+    @media (min-width: 768px) { .desktop-only{display:block;} .mobile-only{display:none;} }
+    summary.click-hint::after { content:" ▶ 開く"; font-size:11px; color:#FBBF24; margin-left:6px; }
+    details[open] summary.click-hint::after { content:" ▲ 閉じる"; color:#FBBF24; }
+    .table-container { overflow-x:auto; }
+    .break-anywhere { overflow-wrap:anywhere; word-break:break-word; }
+    .num { white-space:nowrap; }
+    th, td { vertical-align:top; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    .macro-box { display:flex; flex-direction:column; justify-content:flex-start; align-items:flex-end; width:5rem; /* 固定幅を確保 */ flex-shrink: 0; /* 縮まないように設定 */ }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+    <header class="mb-6 md:mb-10 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-400/10 text-yellow-300 text-xs md:text-sm font-semibold border border-yellow-300/30 mb-3">LINE登録者限定</div>
+      <h1 class="font-heading text-3xl md:text-5xl lg:text-6xl text-white mb-3">最短で細マッチョになれる！<br>厳選外食リスト50選</h1>
+      <p class="text-sm md-text-base text-gray-400 max-w-3xl mx-auto">「もうガリガリとは言わせない。」食って、鍛えて、理想のカラダへ。<br class="hidden md:block">シーン別に“いま”選ぶ一皿が3秒でわかる。</p>
+    </header>
+
+    <div class="mb-5">
+      <div class="flex flex-wrap justify-center border-b border-gray-700 gap-1">
+        <button data-tab="tab1" class="tab-button tab-active text-xs md:text-sm font-bold py-2.5 px-3 md:px-5 rounded-t-lg">コンビニ</button>
+        <button data-tab="tab2" class="tab-button text-xs md:text-sm font-bold py-2.5 px-3 md:px-5 text-gray-400 hover:bg-gray-800 rounded-t-lg">牛丼・定食</button>
+        <button data-tab="tab3" class="tab-button text-xs md:text-sm font-bold py-2.5 px-3 md:px-5 text-gray-400 hover:bg-gray-800 rounded-t-lg">ファストフード</button>
+        <button data-tab="tab4" class="tab-button text-xs md:text-sm font-bold py-2.5 px-3 md:px-5 text-gray-400 hover:bg-gray-800 rounded-t-lg">カフェ・ランチ</button>
+        <button data-tab="tab5" class="tab-button text-xs md:text-sm font-bold py-2.5 px-3 md:px-5 text-gray-400 hover:bg-gray-800 rounded-t-lg">居酒屋</button>
+      </div>
+    </div>
+
+    <section id="sceneGuide" class="grid grid-cols-1 md:grid-cols-5 gap-2 text-[13px] text-gray-300 mb-4">
+      <div class="bg-gray-800/60 p-3 rounded-lg"><div class="text-yellow-300 font-bold mb-1">コンビニ</div>仕事帰り/トレ後の即時補給</div>
+      <div class="bg-gray-800/60 p-3 rounded-lg"><div class="text-yellow-300 font-bold mb-1">牛丼・定食</div>外回り/昼休みの爆速ランチ</div>
+      <div class="bg-gray-800/60 p-3 rounded-lg"><div class="text-yellow-300 font-bold mb-1">ファストフード</div>移動中/短時間でエネルギー補給</div>
+      <div class="bg-gray-800/60 p-3 rounded-lg"><div class="text-yellow-300 font-bold mb-1">カフェ・ランチ</div>打ち合わせ/ゆったり作業飯</div>
+      <div class="bg-gray-800/60 p-3 rounded-lg"><div class="text-yellow-300 font-bold mb-1">居酒屋</div>飲みながら“増やす”賢い選択</div>
+    </section>
+
+    <section id="rankWrap" class="mb-6">
+      <h2 class="font-heading text-xl md:text-2xl mb-3">このカテゴリの即決ランキング</h2>
+      <div id="rankGrid" class="grid grid-cols-1 md:grid-cols-3 gap-3"></div>
+    </section>
+
+    <main>
+      <div id="tab1" class="tab-panel tab-panel-active"></div>
+      <div id="tab2" class="tab-panel"></div>
+      <div id="tab3" class="tab-panel"></div>
+      <div id="tab4" class="tab-panel"></div>
+      <div id="tab5" class="tab-panel"></div>
+    </main>
+
+    <footer class="text-center mt-10 pt-6 border-t border-gray-800">
+      <p class="text-gray-400 text-xs">※各栄養成分値は参考値です。実際の商品と異なる場合があります。</p>
+      <p class="text-gray-400 text-xs mt-1">※本リストは作成時点での最新情報に基づいています。店舗や時期により実際のメニュー・栄養成分と異なる可能性があります。</p>
+    </footer>
+    <div class="text-center mt-4 text-xs text-gray-500">© 2025 higa. All Rights Reserved.</div>
+  </div>
+
+<script>
+// ====== データセット（全タブ） ======
+const mealData = {
+  tab1: [
+    { menu: '７プレミアム サラダチキン（プレーン）', store: 'セブン-イレブン', protein: 23.8, fat: 1.0, carbs: 0.0, cal: 114, comment: 'プレーンは余計な脂質が少なく扱いやすい。' },
+    { menu: '７プレミアム 鶏むね肉とブロッコリー', store: 'セブン-イレブン', protein: 19.8, fat: 2.0, carbs: 4.2, cal: 110, comment: '高タンパク・低脂質の鉄板。迷ったらコレでOK。' },
+    { menu: 'グリルチキン', store: 'ファミリーマート', protein: 22.0, fat: 3.0, carbs: 2.0, cal: 128, comment: 'ファミマの高たんぱく定番。' },
+    { menu: 'スモークサラダチキン', store: 'ローソン', protein: 20.0, fat: 1.0, carbs: 1.0, cal: 110, comment: 'ローソンの定番チキン。' },
+    { menu: 'プロテインバー', store: '各社', protein: 15.0, fat: 6.0, carbs: 18.0, cal: 200, comment: '間食用に最適。' },
+    { menu: 'さばの塩焼き', store: 'セブン-イレブン', protein: 18.0, fat: 12.0, carbs: 0.0, cal: 220, comment: '脂質はあるが良質なオメガ3。' },
+    { menu: '半熟ゆで卵', store: '各社', protein: 6.0, fat: 5.0, carbs: 0.3, cal: 70, comment: '手軽なタンパク源。' },
+    { menu: '胡麻だれで食べる とうふそうめん風', store: 'ファミリーマート', protein: 11.5, fat: 3.0, carbs: 18.0, cal: 150, comment: 'たんぱく質が11.5g前後と優秀。夏の置き換えに。' },
+    { menu: 'NL ブランパン（乳酸菌入）', store: 'ローソン', protein: 7.0, fat: 2.0, carbs: 12.0, cal: 90, comment: '糖質コントロールの定番。タンパク質は他で補完を。' },
+    { menu: 'ザバス ミルクプロテイン', store: '各社', protein: 15.0, fat: 0.0, carbs: 10.0, cal: 100, comment: '運動後30分以内に。' }
+  ],
+  tab2: [
+    { menu: 'チーズ牛サラダ', store: '吉野家', protein: 30.0, fat: 15.0, carbs: 10.0, cal: 350, comment: '高たんぱく・低糖質の現行サラダ系メニュー。' },
+    { menu: '牛丼ライト', store: 'すき家', protein: 24.0, fat: 15.0, carbs: 20.0, cal: 350, comment: 'ご飯を豆腐に置換。P24g前後で減量・調整に最適。' },
+    { menu: 'ほっけ定食', store: 'やよい軒', protein: 28.0, fat: 10.0, carbs: 30.0, cal: 400, comment: '魚でしっかりタンパク質。' },
+    { menu: '黒酢あん定食', store: '大戸屋', protein: 26.0, fat: 14.0, carbs: 40.0, cal: 450, comment: 'バランス重視。' },
+    { menu: '牛焼肉定食', store: '松屋', protein: 32.0, fat: 20.0, carbs: 45.0, cal: 550, comment: 'ボリューム満点。' },
+    { menu: '銀鮭定食', store: 'やよい軒', protein: 29.0, fat: 9.0, carbs: 25.0, cal: 380, comment: '魚でバランスよく。' },
+    { menu: 'しょうが焼き', store: '大戸屋', protein: 27.0, fat: 16.0, carbs: 35.0, cal: 420, comment: '定番の豚肉メニュー。' },
+    { menu: '竜田定食', store: '松屋', protein: 30.0, fat: 18.0, carbs: 38.0, cal: 480, comment: '揚げ物だが高タンパク。' },
+    { menu: '鉄火丼', store: 'すき家', protein: 31.0, fat: 8.0, carbs: 28.0, cal: 370, comment: 'マグロでヘルシーに。' },
+    { menu: '肉野菜炒め', store: '日高屋', protein: 25.0, fat: 12.0, carbs: 30.0, cal: 350, comment: '野菜も摂れる定番。' }
+  ],
+  tab3: [
+    { menu: 'ローストチキンサンド', store: 'サブウェイ', protein: 20.0, fat: 5.0, carbs: 35.0, cal: 320, comment: '野菜たっぷりで低脂質。' },
+    { menu: 'ダブルチーズバーガー', store: 'マクドナルド', protein: 25.0, fat: 26.0, carbs: 34.0, cal: 450, comment: 'たんぱく質はあるが脂質注意。' },
+    { menu: 'てりやきチキンフィレオ', store: 'マクドナルド', protein: 22.0, fat: 20.0, carbs: 38.0, cal: 420, comment: 'チキンでタンパク質。' },
+    { menu: 'ナゲット(5ピース)', store: 'マクドナルド', protein: 15.0, fat: 14.0, carbs: 16.0, cal: 270, comment: 'シェアもしやすい。' },
+    { menu: 'オリジナルチキン', store: 'ケンタッキー', protein: 21.0, fat: 13.0, carbs: 9.0, cal: 237, comment: '揚げても意外と低糖質。' },
+    { menu: 'ツイスター', store: 'ケンタッキー', protein: 19.0, fat: 12.0, carbs: 28.0, cal: 320, comment: '野菜と一緒に食べやすい。' },
+    { menu: 'クラシックバーガー', store: 'フレッシュネスバーガー', protein: 26.0, fat: 18.0, carbs: 30.0, cal: 420, comment: '牛肉100%で満足感あり。' },
+    { menu: 'ワッパーJr.', store: 'バーガーキング', protein: 28.0, fat: 17.0, carbs: 32.0, cal: 410, comment: '野菜も多め。' },
+    { menu: 'スパイシーモスバーガー', store: 'モスバーガー', protein: 24.0, fat: 16.0, carbs: 36.0, cal: 400, comment: '辛味で満足感アップ。' }
+  ],
+  tab4: [
+    { menu: 'グリルチキン', store: 'ガスト', protein: 29.0, fat: 15.0, carbs: 10.0, cal: 320, comment: '定番の高タンパク。' },
+    { menu: '若鶏のディアボラ風', store: 'サイゼリヤ', protein: 26.0, fat: 16.0, carbs: 8.0, cal: 310, comment: '人気の高タンパク定番。サイドにサラダを。' },
+    { menu: 'ラップサンド', store: 'スターバックス', protein: 18.0, fat: 10.0, carbs: 28.0, cal: 280, comment: '軽食に便利。' },
+    { menu: 'ミラノサンド', store: 'ドトール', protein: 21.0, fat: 12.0, carbs: 32.0, cal: 330, comment: 'バランス良く。' },
+    { menu: 'レタスドッグ', store: 'ドトール', protein: 15.0, fat: 9.0, carbs: 25.0, cal: 250, comment: '軽めに食べられる。' },
+    { menu: 'サラダごはん', store: 'ガスト', protein: 20.0, fat: 12.0, carbs: 40.0, cal: 380, comment: '野菜とタンパクを両立。' },
+    { menu: 'オマール海老のビスク', store: 'Soup Stock Tokyo', protein: 12.0, fat: 9.0, carbs: 18.0, cal: 210, comment: 'スープで栄養補給。' },
+    { menu: 'パスタランチ', store: 'プロント', protein: 17.0, fat: 13.0, carbs: 42.0, cal: 370, comment: '炭水化物も補給したい時に。' },
+    { menu: 'ホットドッグ', store: 'タリーズ', protein: 16.0, fat: 11.0, carbs: 30.0, cal: 300, comment: '小腹が空いた時に。' }
+  ],
+  tab5: [
+    { menu: '馬刺し', store: '居酒屋', protein: 25.0, fat: 2.0, carbs: 0.0, cal: 120, comment: '超高タンパク低脂質。' },
+    { menu: 'エイヒレ', store: '居酒屋', protein: 22.0, fat: 2.0, carbs: 5.0, cal: 130, comment: '噛むほどに味が出る。' },
+    { menu: '焼き鳥(もも)', store: '居酒屋', protein: 18.0, fat: 12.0, carbs: 2.0, cal: 180, comment: '定番のタンパク源。' },
+    { menu: '刺身盛り合わせ', store: '居酒屋', protein: 30.0, fat: 8.0, carbs: 0.0, cal: 220, comment: '魚介で良質タンパク。' },
+    { menu: 'たこぶつ', store: '居酒屋', protein: 16.0, fat: 1.0, carbs: 1.0, cal: 80, comment: '低脂質・高タンパク。' },
+    { menu: 'だし巻き卵', store: '居酒屋', protein: 12.0, fat: 9.0, carbs: 2.0, cal: 130, comment: '卵料理の定番。' },
+    { menu: '枝豆', store: '居酒屋', protein: 11.0, fat: 4.0, carbs: 9.0, cal: 120, comment: '手軽な植物性タンパク。' },
+    { menu: '冷奴', store: '居酒屋', protein: 10.0, fat: 5.0, carbs: 3.0, cal: 90, comment: '定番の大豆食品。' },
+    { menu: 'ガリトマト', store: '居酒屋', protein: 3.0, fat: 0.0, carbs: 7.0, cal: 40, comment: 'さっぱり箸休めに。' },
+    { menu: 'もずく酢', store: '居酒屋', protein: 2.0, fat: 0.0, carbs: 3.0, cal: 20, comment: '低カロリーで整腸作用。' }
+  ]
+};
+
+// ====== モバイル描画（P/kcal上揃え固定） ======
+function renderMobileCards(id, d){
+  const items = d.map(i => (
+    `<details class="bg-gray-800 rounded-xl p-3 shadow border border-gray-700/50">`
+    // ===== 修正箇所 =====
+    // justify-betweenをやめ、左側の要素が可変幅を持つようにflex-1を追加しました。
+    + `<summary class="list-none cursor-pointer flex items-start gap-3 click-hint">`
+      + `<div class="flex-1 min-w-0">` // メニュー名と店名が長くなった場合でもレイアウトが崩れないように設定
+        + `<div class="font-bold text-base">${i.menu}</div>`
+        + `<div class="text-xs text-gray-400">${i.store}</div>`
+      + `</div>`
+      + `<div class="macro-box">`
+        + `<div class="text-yellow-300 font-extrabold text-lg leading-none">${i.protein}<span class="text-xs font-bold">g</span></div>`
+        + `<div class="text-[11px] text-gray-400">${i.cal}kcal</div>`
+      + `</div>`
+    + `</summary>`
+    + `<div class="mt-3 grid grid-cols-3 gap-2 text-sm">`
+      + `<div class="bg-gray-900/60 rounded-lg p-2 text-center"><div class="text-gray-400 text-xs">脂質</div><div class="font-bold">${i.fat}g</div></div>`
+      + `<div class="bg-gray-900/60 rounded-lg p-2 text-center"><div class="text-gray-400 text-xs">炭水化物</div><div class="font-bold">${i.carbs}g</div></div>`
+      + `<div class="bg-gray-900/60 rounded-lg p-2 text-center"><div class="text-gray-400 text-xs">カロリー</div><div class="font-bold">${i.cal}</div></div>`
+    + `</div>`
+    + `<p class="mt-3 text-sm text-gray-300">${i.comment}</p>`
+    + `</details>`
+  )).join('');
+  const html = `<div class="mobile-only grid grid-cols-1 gap-2">${items}</div>`;
+  document.getElementById(id).innerHTML = html;
+}
+
+// ====== PC描画（固定レイアウト） ======
+function renderDesktopTable(id, d){
+  const rows = d.map(i => (
+    `<tr class="border-b border-gray-700 hover:bg-gray-700/40">`
+      + `<td class="p-3 break-anywhere">${i.menu}</td>`
+      + `<td class="p-3 break-anywhere">${i.store}</td>`
+      + `<td class="p-3 text-right num font-extrabold text-yellow-300">${i.protein}</td>`
+      + `<td class="p-3 text-right num">${i.fat}</td>`
+      + `<td class="p-3 text-right num">${i.carbs}</td>`
+      + `<td class="p-3 text-right num">${i.cal}</td>`
+      + `<td class="p-3 text-sm break-anywhere">${i.comment}</td>`
+    + `</tr>`
+  )).join('');
+  const html = `
+    <div class="desktop-only rounded-xl shadow table-container">
+      <div class="bg-gray-800 p-4 rounded-xl">
+        <table class="w-full text-left table-fixed">
+          <thead>
+            <tr class="border-b border-gray-600">
+              <th class="p-3 text-sm font-bold text-gray-300">メニュー</th>
+              <th class="p-3 text-sm font-bold text-gray-300">店名</th>
+              <th class="p-3 text-sm font-bold text-yellow-400">P(g)</th>
+              <th class="p-3 text-sm font-bold text-gray-300">脂質(g)</th>
+              <th class="p-3 text-sm font-bold text-gray-300">炭水化物(g)</th>
+              <th class="p-3 text-sm font-bold text-gray-300">kcal</th>
+              <th class="p-3 text-sm font-bold text-gray-300">コメント</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+  document.getElementById(id).innerHTML = html;
+}
+
+// ====== ランキング生成 ======
+function pickTop(d, key, o){
+  const desc   = (o && o.desc===false) ? false : true;
+  const limit  = (o && o.limit) ? o.limit : 3;
+  const filter = (o && o.filter) ? o.filter : (()=>true);
+  return [...d].filter(filter).sort((a,b)=> desc ? (b[key]-a[key]) : (a[key]-b[key]) ).slice(0,limit);
+}
+function renderRanking(tabKey){
+  const d  = mealData[tabKey];
+  const hi = pickTop(d,'protein',{desc:true,limit:3});
+  const lf = pickTop(d,'fat',{desc:false,limit:3,filter:x=>x.protein>=15});
+  const lc = pickTop(d,'cal',{desc:false,limit:3});
+  const blocks = [
+    {title:'高たんぱくTOP3', note:'迷ったらここから。', items:hi},
+    {title:'低脂質TOP3', note:'減量/夜食にも◎ (P≥15g)', items:lf},
+    {title:'低カロリーTOP3', note:'軽く済ませたい日に。', items:lc}
+  ];
+  const html = blocks.map(b => {
+    const lis = b.items.map((x,i) => (
+      `<li class="flex justify-between items-center bg-gray-900/50 rounded-lg p-2">`
+        + `<div class="flex-1 min-w-0">`
+          + `<div class="truncate font-bold">${i+1}. ${x.menu}</div>`
+          + `<div class="text-xs text-gray-400">${x.store}</div>`
+        + `</div>`
+        + `<div class="text-right ml-2 text-sm">`
+          + `<div class="text-yellow-300 font-extrabold">P ${x.protein}g</div>`
+          + `<div class="text-gray-400 text-[11px]">F ${x.fat} / ${x.cal}kcal</div>`
+        + `</div>`
+      + `</li>`
+    )).join('');
+    return (
+      `<div class="bg-gray-800 rounded-xl p-4 border border-gray-700/60">`
+        + `<div class="flex items-baseline justify-between mb-2">`
+          + `<h3 class="font-heading text-lg">${b.title}</h3>`
+          + `<span class="text-xs text-gray-400">${b.note}</span>`
+        + `</div>`
+        + `<ol class="space-y-2">${lis}</ol>`
+      + `</div>`
+    );
+  }).join('');
+  document.getElementById('rankGrid').innerHTML = html;
+}
+
+// ====== 初期描画 & タブ切替 ======
+function renderTab(tabKey){
+  const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+  const d = mealData[tabKey];
+  if(isDesktop){ renderDesktopTable(tabKey, d); } else { renderMobileCards(tabKey, d); }
+}
+
+function init(){
+  renderTab('tab1');
+  renderRanking('tab1');
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabPanels  = document.querySelectorAll('.tab-panel');
+  tabButtons.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const t = btn.dataset.tab;
+      tabButtons.forEach(b=>{ b.classList.remove('tab-active'); b.classList.add('text-gray-400','hover:bg-gray-800'); });
+      btn.classList.add('tab-active'); btn.classList.remove('text-gray-400','hover:bg-gray-800');
+      tabPanels.forEach(p=>p.classList.remove('tab-panel-active'));
+      document.getElementById(t).classList.add('tab-panel-active');
+      renderTab(t); renderRanking(t);
+    });
+  });
+  let lastIsDesktop = window.matchMedia('(min-width: 768px)').matches;
+  window.addEventListener('resize', ()=>{
+    const now = window.matchMedia('(min-width: 768px)').matches;
+    if(now !== lastIsDesktop){
+      const active = document.querySelector('.tab-button.tab-active')?.dataset.tab || 'tab1';
+      renderTab(active);
+      lastIsDesktop = now;
+    }
+  });
+}
+
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', init);
+}else{ init(); }
+</script>
+</body>
+</html>
